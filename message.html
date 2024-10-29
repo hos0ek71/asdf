@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffe4e1;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    h3 {
+      font-size: 2em;
+      color: #ff4500;
+      margin-bottom: 20px;
+    }
+    .balloons {
+      display: flex;
+      gap: 20px;
+    }
+    .balloon {
+      width: 50px;
+      height: 80px;
+      background-color: #ff6347;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .balloon:before {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      width: 2px;
+      height: 30px;
+      background-color: #000;
+      transform: translateX(-50%);
+    }
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://www.transparenttextures.com/patterns/shattered.png');
+      animation: moveConfetti 3s linear infinite;
+    }
+    @keyframes moveConfetti {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+  </style>
+</head>
+<body> 
+  <div class="confetti"></div>
+  <h3>아빠 생일 축하해! 앞으로 건강하기만해~</h3>
+  <div class="balloons">
+    <div class="balloon" style="background-color: #ff6347;"></div>
+    <div class="balloon" style="background-color: #ffd700;"></div>
+    <div class="balloon" style="background-color: #87cefa;"></div>
+  </div>
+</body>
+</html>
